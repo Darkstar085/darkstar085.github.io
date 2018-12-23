@@ -23,9 +23,10 @@
 }
 
 body {
-    font-family: 'product_sans';
+	font-family: 'product_sans';
 	overflow: hidden;
-    height: 100vh;
+	height: 100vh;
+	color: #fafafa;
 }
 #particles-js {
 	height: 100%;
@@ -71,7 +72,7 @@ body {
 }
 
 .social i {
-	color: #212121;
+	color: #fafafa;
 }
 .g-red {
 	color: #db3236 !important;
