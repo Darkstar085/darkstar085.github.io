@@ -19,6 +19,7 @@
          url('./../fonts/product_sans_regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    color: #fafafa;
 }
 
 body {
@@ -39,12 +40,12 @@ body {
 
 .uno > a {
   position: relative;
-  color: #000;
+  color: #FAFAFA;
   text-decoration: none;
 }
 
 .uno > a:hover {
-  color: #000;
+  color: #FAFAFA;
 }
 .uno > a:before {
   content: "";
@@ -53,7 +54,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: #FAFAFA;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
