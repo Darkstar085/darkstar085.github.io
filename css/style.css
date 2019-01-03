@@ -28,14 +28,12 @@ body {
 	height: 100vh;
 	color: #212121;
 }
-/* ----------------------
-  particales js
-------------------------*/
+
 #particles-js {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(35,39,65);
+  background-color: #000000;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,7 +44,6 @@ body {
 	height: 100%;
 	width: 100%;
 }
-
 
 .uno > a {
   position: relative;
