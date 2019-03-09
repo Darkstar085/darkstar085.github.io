@@ -27,6 +27,13 @@ body {
 	font-family: 'product_sans';
 	overflow: hidden;
 	height: 100vh;
+	color: #000000;
+}
+
+footer {
+	font-family: 'product_sans';
+	overflow: hidden;
+	color: #fafafa;
 }
 
 canvas {
