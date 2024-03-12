@@ -1,22 +1,20 @@
-@font-face {
-  font-family: "product_sans";
-  src: url("./../fonts/product_sans_regular-webfont.woff2") format("woff2"),
-    url("./../fonts/product_sans_regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  color: #fafafa;
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Product+Sans:wght@400&display=swap");
+
+/* Apply font to elements */
+body,
+footer {
+  font-family: "Product Sans", sans-serif;
 }
 
-/* ---- reset ---- */
+/* ---- Saxy stuffs ---- */
 body {
-  font-family: "product_sans";
   overflow: hidden;
   height: 100vh;
   color: #000000;
 }
 
 footer {
-  font-family: "product_sans";
   overflow: hidden;
   color: #fafafa;
 }
@@ -76,17 +74,17 @@ canvas {
 }
 
 .card {
-  margin: 0 auto; /* Center the card horizontally */
-  max-width: 650px; /* Set maximum width for the card */
-  background-color: #ffffff; /* Set background color for the card */
-  border-radius: 10px; /* Add border radius for rounded corners */
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); /* Add box shadow for depth */
+  margin: 0 auto;
+  max-width: 650px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .card-img-top {
-  width: 150px; /* Set width for the card image */
-  height: 150px; /* Set height for the card image */
-  margin: 1.25rem auto; /* Set margin for the card image */
+  width: 150px;
+  height: 150px;
+  margin: 1.25rem auto;
 }
 
 .shadowed {
@@ -94,31 +92,27 @@ canvas {
 }
 
 .card-body {
-  padding: 1.25rem; /* Add padding for the card body */
+  padding: 1.25rem;
 }
 
 .card-body h1 {
-  margin-bottom: 1rem; /* Add margin bottom for the heading */
+  margin-bottom: 1rem;
 }
 
 .card-body p {
-  margin-bottom: 0; /* Remove margin bottom for the paragraph */
+  margin-bottom: 0;
 }
 
 .row.text-center {
-  margin-top: 1.25rem; /* Add margin top for the row with text-center class */
+  margin-top: 1.25rem;
 }
 
 .row.text-center .social {
-  margin: 0 10px; /* Add margin for the social icons */
+  margin: 0 10px;
 }
 
 .social {
-  margin: 0 10px; /* Adding spaces between social icons */
-}
-
-.s-google {
-  width: 20% !important;
+  margin: 0 10px;
 }
 
 .social i {
