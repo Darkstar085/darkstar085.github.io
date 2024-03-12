@@ -110,6 +110,7 @@ canvas {
 
 .card-body p {
   margin-bottom: 0;
+  color: black;
 }
 
 .row.text-center {
@@ -125,7 +126,32 @@ canvas {
 }
 
 .social i {
-  color: #212121;
+  color: black;
+}
+
+.social.telegram:hover i {
+  color: #0088cc;
+  text-shadow: 0 0 5px #0088cc;
+}
+
+.social.facebook:hover i {
+  color: #3b5998;
+  text-shadow: 0 0 5px #3b5998;
+}
+
+.social.instagram:hover i {
+  color: #bc2a8d;
+  text-shadow: 0 0 5px #bc2a8d;
+}
+
+.social.twitter:hover i {
+  color: #1d1d1d;
+  text-shadow: 0 0 5px #1d1d1d;
+}
+
+.social.github:hover i {
+  color: #211f1f;
+  text-shadow: 0 0 5px #211f1f;
 }
 
 .fa-heart {
