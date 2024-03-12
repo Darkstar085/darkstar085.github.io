@@ -7,41 +7,24 @@ footer {
   font-family: "Product Sans", sans-serif;
 }
 
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* ---- Saxy stuffs ---- */
 body {
   margin: 0;
   background: #fff;
+  overflow: hidden;
 }
 
-footer {
-  text-align: center;
-  font-size: 0.976rem;
-  color: #fafafa;
-}
-
-.link {
-  color: whitesmoke;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.link:hover {
-  color: #5b07f0;
-}
-
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
-
-/* ---- particles.js container ---- */
 #particles-js {
-  position: absolute;
   width: 100%;
   height: 100%;
   background-color: #000000;
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: 50% 50%;
 }
 
@@ -51,35 +34,80 @@ canvas {
   width: 100%;
 }
 
-.uno > a {
-  position: relative;
-  color: #fafafa;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 35px 200px;
+  font-size: 24px;
+}
+
+.navbar-brand {
+  color: #fff;
   text-decoration: none;
+  font-size: 24px;
+  position: relative;
 }
 
-.uno > a:hover {
-  color: #fafafa;
+.navbar-brand:hover {
+  color: #ddd;
 }
 
-.uno > a:before {
+.navbar-brand::after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 0;
   height: 2px;
+  background-color: #fff;
   bottom: 0;
-  left: 0;
-  background-color: #fafafa;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  left: 50%;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
-.uno > a:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+.navbar-brand:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.976rem;
+  color: #fff;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #5b07f0;
 }
 
 .card {
@@ -117,8 +145,9 @@ canvas {
   margin-top: 1.25rem;
 }
 
-.row.text-center .social {
-  margin: 0 10px;
+.social-media {
+  margin-top: auto;
+  margin-bottom: 1rem;
 }
 
 .social {
@@ -127,6 +156,11 @@ canvas {
 
 .social i {
   color: black;
+}
+
+.social.github:hover i {
+  color: #211f1f;
+  text-shadow: 0 0 5px #211f1f;
 }
 
 .social.telegram:hover i {
@@ -149,11 +183,6 @@ canvas {
   text-shadow: 0 0 5px #1d1d1d;
 }
 
-.social.github:hover i {
-  color: #211f1f;
-  text-shadow: 0 0 5px #211f1f;
-}
-
 .fa-heart {
   color: red;
   font-size: 0.976rem;
@@ -168,41 +197,8 @@ canvas {
   100% {
     transform: scale(1.1);
   }
+
   50% {
     transform: scale(0.8);
-  }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .s-google {
-    width: 50% !important;
-  }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .s-google {
-    width: 35% !important;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .card-img-top {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-  }
-
-  footer {
-    background-color: transparent;
-    color: #fafafa;
-    padding: 10px 0;
-  }
-
-  .row.text-center {
-    margin-top: 1rem;
-  }
-
-  .row.text-center .social {
-    margin: 0 5px;
   }
 }
