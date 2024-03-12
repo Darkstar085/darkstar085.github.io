@@ -9,14 +9,24 @@ footer {
 
 /* ---- Saxy stuffs ---- */
 body {
-  overflow: hidden;
-  height: 100vh;
-  color: #000000;
+  margin: 0;
+  background: #fff;
 }
 
 footer {
-  overflow: hidden;
+  text-align: center;
+  font-size: 0.976rem;
   color: #fafafa;
+}
+
+.link {
+  color: whitesmoke;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #5b07f0;
 }
 
 canvas {
@@ -30,7 +40,6 @@ canvas {
   width: 100%;
   height: 100%;
   background-color: #000000;
-  background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -121,6 +130,7 @@ canvas {
 
 .fa-heart {
   color: red;
+  font-size: 0.976rem;
 }
 
 .pulse {
