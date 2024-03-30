@@ -21,8 +21,12 @@ body {
 }
 
 #particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
   background-color: #000000;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -39,7 +43,7 @@ body {
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  padding: 35px 200px;
+  padding: 35px 15px;
   font-size: 24px;
 }
 
@@ -78,15 +82,6 @@ footer {
 }
 
 .container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.container-fluid {
-  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -112,6 +107,7 @@ footer {
 
 .card {
   margin: 0 auto;
+  width: 100%;
   max-width: 650px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -122,10 +118,6 @@ footer {
   width: 150px;
   height: 150px;
   margin: 1.25rem auto;
-}
-
-.shadowed {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .card-body {
@@ -139,10 +131,6 @@ footer {
 .card-body p {
   margin-bottom: 0;
   color: black;
-}
-
-.row.text-center {
-  margin-top: 1.25rem;
 }
 
 .social-media {
@@ -200,5 +188,12 @@ footer {
 
   50% {
     transform: scale(0.8);
+  }
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (min-width: 768px) {
+  .navbar {
+    padding: 35px 200px;
   }
 }
