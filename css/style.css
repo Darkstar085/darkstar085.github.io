@@ -52,6 +52,7 @@ body {
   text-decoration: none;
   font-size: 24px;
   position: relative;
+  text-shadow: 0 1px 6px #000;
 }
 
 .navbar-brand:hover {
@@ -80,22 +81,30 @@ body {
 }
 
 .dropdown-menu {
+  color: #fff;
+  background: rgba(34, 34, 34, 0.8);
   display: none;
   position: absolute;
   top: 100%;
   min-width: 130px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
   backdrop-filter: blur(8px) saturate(140%);
   -webkit-backdrop-filter: blur(8px) saturate(140%);
-  border: 1.5px solid rgba(255,255,255,0.28);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: middle;
-  opacity: 0.97;
-  box-sizing: content-box;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.dropdown-item {
+  color: #fff !important;
+}
+.dropdown-item:hover {
+  background: #5b07f0;
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .dropdown-toggle::after {
@@ -140,7 +149,7 @@ footer {
   max-width: 650px;
   backdrop-filter: blur(8px) saturate(140%);
   -webkit-backdrop-filter: blur(8px) saturate(140%);
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(34, 34, 34, 0.65);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.8px);
@@ -167,7 +176,7 @@ footer {
 
 .card-body p {
   margin-bottom: 0;
-  color: black;
+  color: #d3d1d1;
 }
 
 .social-media {
@@ -180,12 +189,12 @@ footer {
 }
 
 .social i {
-  color: black;
+  color: #fff;
 }
 
 .social.github:hover i {
-  color: #211f1f;
-  text-shadow: 0 0 5px #211f1f;
+  color: #000000;
+  text-shadow: 0 0 5px #000000;
 }
 
 .social.telegram:hover i {
@@ -194,18 +203,26 @@ footer {
 }
 
 .social.facebook:hover i {
-  color: #3b5998;
-  text-shadow: 0 0 5px #3b5998;
+  color: #1877f2;
+  text-shadow: 0 0 5px #1877f2;
 }
 
 .social.instagram:hover i {
-  color: #bc2a8d;
-  text-shadow: 0 0 5px #bc2a8d;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  border-radius: 4px;
+  text-shadow: 0 0 5px #fd5949, 0 0 5px #d6249f, 0 0 5px #285aeb;
 }
 
 .social.twitter:hover i {
-  color: #1d1d1d;
-  text-shadow: 0 0 5px #1d1d1d;
+  color: #000000;
+  text-shadow: 0 0 5px #000000;
 }
 
 .fa-heart {
