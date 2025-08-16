@@ -32,6 +32,11 @@ body {
   background-position: 50% 50%;
 }
 
+.typer,
+.typewrite {
+  color: #e2e2e2 !important;
+}
+
 .main-content {
   position: absolute;
   height: 100%;
@@ -251,5 +256,29 @@ footer {
 @media only screen and (min-width: 768px) {
   .navbar {
     padding: 35px 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .center-box {
+    width: 90vw;
+    margin: 10px auto;
+    padding: 20px 5px;
+  }
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+  .icon-links {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  body {
+    font-size: 1rem;
+  }
+  .header,
+  .footer {
+    text-align: center;
+    font-size: 1rem;
   }
 }
