@@ -120,5 +120,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/typer.js"></script>
+    <svg width="0" height="0">
+      <filter id="electric-glow">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.03"
+          numOctaves="2"
+          seed="2"
+          result="turb"
+        />
+        <feDisplacementMap
+          in2="turb"
+          in="SourceGraphic"
+          scale="20"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+        <feGaussianBlur stdDeviation="2" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </svg>
   </body>
 </html>
