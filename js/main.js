@@ -39,21 +39,39 @@
       const response = await fetch('https://api.github.com/users/Darkstar085');
       if (!response.ok) throw new Error('GitHub API unavailable');
       const data = await response.json();
-      document.querySelector('#repo-count').textContent = data.public_repos ?? '—';
-      document.querySelector('#followers').textContent = data.followers ?? '—';
-      // GitHub's public user endpoint does not expose total stars, so keep this honest.
-      document.querySelector('#stars').textContent = '—';
+      const repo = document.querySelector('#repo-count');
+      const followers = document.querySelector('#followers');
+      const following = document.querySelector('#following');
+      const since = document.querySelector('#github-since');
+      const avatar = document.querySelector('#github-avatar');
+      const name = document.querySelector('#github-name');
+      const bio = document.querySelector('#github-bio');
+      if (repo) repo.textContent = data.public_repos ?? '—';
+      if (followers) followers.textContent = data.followers ?? '—';
+      if (following) following.textContent = data.following ?? '—';
+      if (since) since.textContent = data.created_at ? new Date(data.created_at).getFullYear() : '—';
+      if (avatar && data.avatar_url) avatar.src = data.avatar_url;
+      if (name) name.textContent = (data.name || 'SIPUN').toUpperCase().replace(/\s+/g, ' ');
+      if (bio) bio.textContent = data.bio || 'Android & Open Source';
     } catch {
-      ['repo-count','followers','stars'].forEach(id => { const el=document.querySelector('#'+id); if(el) el.textContent='—'; });
+      // Keep the static fallback values if GitHub is unavailable.
     }
   }
   loadGithub();
 
   const sections = [...document.querySelectorAll('main section[id]')];
   const links = [...document.querySelectorAll('.nav a')];
+  const timelineLinks = [...document.querySelectorAll('.timeline-dot')];
   const activeObserver = new IntersectionObserver(entries => entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id));
+    const hash = '#' + entry.target.id;
+    links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === hash));
+    timelineLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === hash));
   }), { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
   sections.forEach(section => activeObserver.observe(section));
+
+  timelineLinks.forEach(link => link.addEventListener('click', () => {
+    timelineLinks.forEach(item => item.classList.remove('active'));
+    link.classList.add('active');
+  }));
 })();

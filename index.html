@@ -20,7 +20,14 @@
   <div class="bg-grid" aria-hidden="true"></div>
   <div class="orb orb-one" aria-hidden="true"></div>
   <div class="orb orb-two" aria-hidden="true"></div>
-  <div class="timeline" aria-hidden="true"><span class="timeline-line"></span><span class="timeline-dot dot-1"></span><span class="timeline-dot dot-2"></span><span class="timeline-dot dot-3"></span><span class="timeline-dot dot-4"></span><span class="timeline-dot dot-5"></span></div>
+  <nav class="timeline" aria-label="Section navigation">
+  <span class="timeline-line"></span>
+  <a class="timeline-dot dot-1" href="#about" aria-label="Go to About" title="About"></a>
+  <a class="timeline-dot dot-2" href="#work" aria-label="Go to Work" title="Work"></a>
+  <a class="timeline-dot dot-3" href="#projects" aria-label="Go to Projects" title="Projects"></a>
+  <a class="timeline-dot dot-4" href="#github" aria-label="Go to GitHub" title="GitHub"></a>
+  <a class="timeline-dot dot-5" href="#contact" aria-label="Go to Contact" title="Contact"></a>
+</nav>
 
   <header class="header">
     <a class="logo" href="#home" aria-label="Sipun Ku Mahanta"><span class="logo-name">Sipun Ku Mahanta</span><span class="logo-dot"></span></a>
@@ -41,7 +48,21 @@
           <span><span class="green">●</span> building &amp; learning</span><span class="terminal-prompt">&gt;_</span>
         </div>
       </div>
-      <div class="hero-visual reveal delay-1" aria-hidden="true"><div class="hero-glow"></div><div class="hero-void"></div></div>
+      <div class="hero-visual reveal delay-1" aria-hidden="true">
+  <div class="hero-glow"></div>
+  <div class="hero-console">
+    <div class="console-head"><span>~/darkstar</span><span>● ● ●</span></div>
+    <div class="console-body">
+      <div><span class="green">$</span> cat focus.txt</div>
+      <div class="console-accent">Android / AOSP</div>
+      <div class="console-accent">Open Source</div>
+      <div class="console-accent">Linux / Web</div>
+      <div class="console-divider"></div>
+      <div><span class="green">$</span> echo $STATUS</div>
+      <div><span class="green">●</span> building &amp; learning<span class="cursor">▋</span></div>
+    </div>
+  </div>
+</div>
       <div class="hero-side reveal delay-2">
         <p class="eyebrow">Developer <span class="eyebrow-line"></span></p>
         <h2>Building<br>things that<br><span class="gradient-text">actually</span> work.</h2>
@@ -53,7 +74,7 @@
       <div class="section-marker"><span>01</span><b>/ ABOUT</b></div>
       <div class="about-grid">
         <div class="about-left">
-          <div class="about-profile"><img src="img/profile.jpg" alt="Sipun Ku Mahanta"></div>
+          <div class="about-profile"><img src="img/profile.jpeg" alt="Sipun Ku Mahanta"></div>
           <div class="about-copy">
             <p>I like learning by building, breaking and figuring things out. Most of my interests live around Android, Open Source, Linux and the web.</p>
             <div class="about-status"><span class="green">●</span> Currently exploring Android internals, Custom ROM development and Linux.</div>
@@ -91,7 +112,21 @@
 
     <section id="github" class="section content-section reveal-section">
       <div class="section-heading-row"><div class="section-marker"><span>04</span><b>/ GITHUB</b></div><a class="section-link" href="https://github.com/Darkstar085" target="_blank" rel="noopener noreferrer">View GitHub ↗</a></div>
-      <div class="github-panel"><div class="github-intro"><h3>Building in public.</h3><p>Check out my repositories and contributions on GitHub.</p></div><div class="stats"><div><strong id="repo-count">—</strong><span>Repositories</span></div><div><strong id="followers">—</strong><span>Followers</span></div><div><strong id="stars">—</strong><span>Stars</span></div><div class="contrib"><div class="contrib-grid" aria-hidden="true"></div><span>GitHub contributions</span></div></div></div>
+      <div class="github-profile-card">
+        <div class="github-profile-head">
+          <div class="github-identity">
+            <img id="github-avatar" src="img/github-avatar.jpg" alt="GitHub profile avatar">
+            <div><strong id="github-name">S I P U N</strong><p id="github-bio">Android &amp; Open Source</p></div>
+          </div>
+          <a class="github-profile-button" href="https://github.com/Darkstar085" target="_blank" rel="noopener noreferrer">Profile ↗</a>
+        </div>
+        <div class="github-stats">
+          <div><strong id="repo-count">—</strong><span>Public repos</span></div>
+          <div><strong id="followers">—</strong><span>Followers</span></div>
+          <div><strong id="following">—</strong><span>Following</span></div>
+          <div><strong id="github-since">—</strong><span>GitHub since</span></div>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="section content-section reveal-section">
