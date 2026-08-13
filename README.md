@@ -1,47 +1,63 @@
 # 🌟 darkstar085.github.io
 
-**Welcome to the personal portfolio site of Sipun Ku Mahanta!**
-Showcasing custom ROM development, open source projects, and a passion for technology.
+**Personal portfolio of Sipun Ku Mahanta**
+
+A lightweight, responsive personal portfolio focused on Android, custom ROMs, open source, Linux, and web experiments.
 
 ## 🚀 Live Demo
 
 Visit the site:
+
 https://darkstar085.github.io/
 
 ## 📁 Project Structure
 
-| File / Folder | Description                  |
-| :------------ | :--------------------------- |
-| `index.html`  | Main landing page            |
-| `css/`        | Custom stylesheets           |
-| `img/`        | Profile \& gallery images    |
-| `js/`         | JavaScript for interactivity |
+| File / Folder | Description |
+| :------------ | :---------- |
+| `index.html` | Main portfolio page |
+| `css/` | Custom responsive styles |
+| `img/` | Profile and site images |
+| `js/` | JavaScript for animations and GitHub data |
 
 ## ✨ Features
 
-- Personal homepage with bio, social links, and featured projects
-- Particle background animation and stylish UI
-- Responsive design for desktop \& mobile
-- Fast loading and optimized for all devices
+- Modern dark/purple portfolio design
+- Full-width responsive navigation
+- Animated header hover underline
+- Hero section with terminal-style interface
+- About and skills sections
+- Custom ROM project showcase
+- SuperiorOS, dotOS, PixysOS and Project Sakura project cards
+- Responsive Contact section with social icons
+- Live public GitHub profile statistics
+- Smooth reveal animations
+- Mobile-friendly layout
+- Reduced-motion accessibility support
+- No framework or build system required
 
 ## 🛠️ Local Development
 
-Clone and run locally:
+Clone the repository:
 
 ```bash
 git clone https://github.com/Darkstar085/darkstar085.github.io.git
 cd darkstar085.github.io
 python3 -m http.server
-# or open index.html directly in your browser
 ```
 
-Access at:
+Then open:
+
 http://localhost:8000/
 
-## 📝 Contributions
+You can also open `index.html` directly, although a local HTTP server is recommended for a more accurate browser environment.
 
-Pull requests, issues, and feature suggestions are always welcome!
-Check the [Issues](https://github.com/Darkstar085/darkstar085.github.io/issues) page or fork and submit your ideas.
+## 🔗 Socials
+
+- Telegram: https://t.me/Darkstar085
+- Instagram: https://instagram.com/Darkstar085
+- Facebook: https://fb.com/sipunku.mahanta
+- X: https://twitter.com/Darkstar085
+- GitHub: https://github.com/Darkstar085
 
 ## 📄 License
 
@@ -49,8 +65,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-- [Swapnil Soni](https://github.com/SwapnilSoni1999)
-- [Jyotiraditya Panda](https://github.com/SilverShades02)
-- [Sipun Ku Mahanta](https://github.com/Darkstar085)
+**Sipun Ku Mahanta**
 
-Feel free to copy, modify, and expand this README as needed for your site’s unique purpose and content.
+GitHub: https://github.com/Darkstar085
