@@ -1,147 +1,86 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="img/favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css"
-      integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <style></style>
-  </head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Sipun Ku Mahanta — personal portfolio, custom ROM development and open source projects.">
+  <meta property="og:title" content="Sipun Ku Mahanta">
+  <meta property="og:description" content="Custom ROM developer, anime lover and open source enthusiast.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://darkstar085.github.io/">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Sipun Ku Mahanta</title>
+</head>
 
-  <body>
-    <div id="particles-js">
-      <div class="main-content">
-        <nav class="navbar">
-          <a href="index.html" class="navbar-brand">Sipun Ku Mahanta</a>
-          <div class="dropdown">
-            <a
-              href="index.html"
-              class="navbar-brand dropdown-toggle"
-              id="superiorDropdown"
-            >
-              My Projects
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="superiorDropdown">
-              <li>
-                <a class="dropdown-item" href="https://github.com/SuperiorOS"
-                  >SuperiorOS</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="https://github.com/dotOS"
-                  >Dot OS</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="https://github.com/PixysOS"
-                  >Pixys OS</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="https://github.com/ProjectSakura"
-                  >Project Sakura</a
-                >
-              </li>
-            </ul>
-          </div>
+<body>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Sipun Ku Mahanta home">Sipun Ku Mahanta</a>
+
+      <details class="projects-menu">
+        <summary>My Projects</summary>
+        <nav aria-label="My projects">
+          <a href="https://github.com/SuperiorOS" target="_blank" rel="noopener noreferrer">SuperiorOS</a>
+          <a href="https://github.com/dotOS" target="_blank" rel="noopener noreferrer">Dot OS</a>
+          <a href="https://github.com/PixysOS" target="_blank" rel="noopener noreferrer">Pixys OS</a>
+          <a href="https://github.com/ProjectSakura" target="_blank" rel="noopener noreferrer">Project Sakura</a>
         </nav>
-        <div class="container-fluid">
-          <div class="row text-center pt-5">
-            <div class="card">
-              <img class="card-img-top" src="img/sweeto.jpg" />
-              <div class="card-body">
-                <div class="col-lg-12">
-                  <h1>
-                    I'm
-                    <span
-                      class="typer"
-                      id="main"
-                      data-words="an Anime Lover,a Custom ROM Developer,a Noob"
-                      data-delay="160"
-                      data-deleteDelay="1000"
-                    ></span>
-                    <span class="cursor" data-owner="main"></span>
-                  </h1>
-                  <p>Just an another Noob...😜</p>
-                </div>
-              </div>
+      </details>
+    </header>
 
-              <div class="row text-center">
-                <div class="social-media">
-                  <a class="social github" href="https://github.com/Darkstar085"
-                    ><i class="fab fa-github fa-2x"></i
-                  ></a>
-                  <a class="social telegram" href="https://t.me/Darkstar085"
-                    ><i class="fab fa-telegram fa-2x"></i
-                  ></a>
-                  <a
-                    class="social facebook"
-                    href="https://fb.com/sipunku.mahanta"
-                    ><i class="fab fa-facebook fa-2x"></i
-                  ></a>
-                  <a
-                    class="social instagram"
-                    href="https://instagram.com/Darkstar085"
-                    ><i class="fab fa-instagram fa-2x"></i
-                  ></a>
-                  <a
-                    class="social twitter"
-                    href="https://twitter.com/Darkstar085"
-                    ><i class="fab fa-x-twitter fa-2x"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <footer class="fixed-bottom">
-              <section class="container text-center">
-                <p>
-                  Made with <i class="fas fa-heart pulse"></i> by
-                  <a class="link" href="https://t.me/Darkstar085">S I P U N</a>
-                </p>
-              </section>
-            </footer>
-          </div>
+    <main class="main">
+      <article class="profile-card" aria-labelledby="intro-title">
+        <div class="profile-card__glow" aria-hidden="true"></div>
+
+        <img
+          class="profile-image"
+          src="img/sweeto.jpg"
+          width="150"
+          height="150"
+          alt="Sipun Ku Mahanta"
+          fetchpriority="high"
+        >
+
+        <div class="profile-copy">
+          <h1 id="intro-title">
+            I'm
+            <span id="typer" class="typer" aria-live="polite"></span><span class="cursor" aria-hidden="true"></span>
+          </h1>
+          <p>Just an another Noob...😜</p>
         </div>
-      </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/typer.js"></script>
-    <svg width="0" height="0">
-      <filter id="electric-glow">
-        <feTurbulence
-          type="fractalNoise"
-          baseFrequency="0.03"
-          numOctaves="2"
-          seed="2"
-          result="turb"
-        />
-        <feDisplacementMap
-          in2="turb"
-          in="SourceGraphic"
-          scale="20"
-          xChannelSelector="R"
-          yChannelSelector="G"
-        />
-        <feGaussianBlur stdDeviation="2" result="blur" />
-        <feMerge>
-          <feMergeNode in="blur" />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
-    </svg>
-  </body>
+
+        <nav class="social-links" aria-label="Social links">
+          <a class="social social--github" href="https://github.com/Darkstar085" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 8.36 22.91c.58.11.79-.25.79-.56v-2.02c-3.22.7-3.9-1.55-3.9-1.55-.53-1.34-1.3-1.7-1.3-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.57-.29-5.27-1.28-5.27-5.72 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.16 1.18a10.96 10.96 0 0 1 5.76 0c2.18-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.77.11 3.06.75.81 1.2 1.84 1.2 3.1 0 4.45-2.7 5.42-5.28 5.71.41.35.78 1.04.78 2.1v3.1c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          </a>
+          <a class="social social--telegram" href="https://t.me/Darkstar085" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.2 18.7 19.3c-.24 1.07-.87 1.33-1.77.83l-4.87-3.59-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.96 9.03-8.16c.39-.35-.09-.54-.61-.19L6.33 12.7 1.57 11.21c-1.04-.33-1.06-1.04.22-1.54L20.4 2.55c.86-.32 1.61.2 1.5 1.65Z"/></svg>
+          </a>
+          <a class="social social--facebook" href="https://fb.com/sipunku.mahanta" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.87.24-1.46 1.5-1.46H17V4.96c-.35-.05-1.55-.15-2.96-.15-2.93 0-4.94 1.79-4.94 5.08V11H6v3h3.1v8h4.4Z"/></svg>
+          </a>
+          <a class="social social--instagram" href="https://instagram.com/Darkstar085" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm-.2 2A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.25 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+          </a>
+          <a class="social social--x" href="https://twitter.com/Darkstar085" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.4L6.47 22H3.36l7.24-8.28L2.2 2h6.4l4.42 5.85L18.9 2Zm-1.1 17.9h1.73L7.69 4h-1.86L17.8 19.9Z"/></svg>
+          </a>
+        </nav>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>Made with <span class="heart" aria-hidden="true">♥</span> by
+        <a href="https://t.me/Darkstar085" target="_blank" rel="noopener noreferrer">S I P U N</a>
+      </p>
+    </footer>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
 </html>
