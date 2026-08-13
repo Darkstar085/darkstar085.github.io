@@ -10,30 +10,33 @@ Visit the site:
 
 https://darkstar085.github.io/
 
+## ✨ Features
+
+- Dark, neon-purple developer portfolio design
+- Linear page flow: Hero → About → Work → Projects → GitHub → Contact
+- Full-width responsive navigation with hover underline
+- Personal hero section with terminal-style status card
+- No external links or social buttons in the hero
+- About section with optimized profile photo and personal details
+- Four-column skills/work cards with category-specific hover colors
+- ROM project cards with branded logos and ROM-specific hover colors
+- GitHub profile statistics loaded from the public GitHub API
+- Contact cards for Telegram, Instagram, Facebook and X
+- Custom SVG + PNG favicon matching the site branding
+- Smooth reveal animations and reduced-motion support
+- Responsive desktop, tablet and mobile layouts
+- No framework or build system required
+
 ## 📁 Project Structure
 
 | File / Folder | Description |
 | :------------ | :---------- |
 | `index.html` | Main portfolio page |
-| `css/` | Custom responsive styles |
-| `img/` | Profile and site images |
-| `js/` | JavaScript for animations and GitHub data |
-
-## ✨ Features
-
-- Modern dark/purple portfolio design
-- Full-width responsive navigation
-- Animated header hover underline
-- Hero section with terminal-style interface
-- About and skills sections
-- Custom ROM project showcase
-- SuperiorOS, dotOS, PixysOS and Project Sakura project cards
-- Responsive Contact section with social icons
-- Live public GitHub profile statistics
-- Smooth reveal animations
-- Mobile-friendly layout
-- Reduced-motion accessibility support
-- No framework or build system required
+| `css/style.css` | Responsive site styles and animations |
+| `js/main.js` | Navigation, typing effect, reveal animations and GitHub data |
+| `img/profile.jpg` | Optimized profile photo |
+| `img/favicon.svg` | Primary scalable favicon |
+| `img/favicon.png` | Apple-touch/fallback favicon |
 
 ## 🛠️ Local Development
 
@@ -49,7 +52,7 @@ Then open:
 
 http://localhost:8000/
 
-You can also open `index.html` directly, although a local HTTP server is recommended for a more accurate browser environment.
+A local HTTP server is recommended for the most accurate browser environment.
 
 ## 🔗 Socials
 
