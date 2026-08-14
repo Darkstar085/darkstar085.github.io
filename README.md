@@ -71,3 +71,7 @@ This project is open source and available under the [MIT License](LICENSE).
 **Sipun Ku Mahanta**
 
 GitHub: https://github.com/Darkstar085
+
+
+## Deployment cleanup
+A weekly GitHub Actions workflow in `.github/workflows/cleanup-old-deployments.yml` deletes GitHub Pages deployments older than 7 days while always preserving the latest 3. It also supports manual runs via `workflow_dispatch`.

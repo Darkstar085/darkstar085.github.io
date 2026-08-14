@@ -340,3 +340,134 @@
     transition: none;
   }
 }
+
+
+/* ===== Hero v3: header name hidden ===== */
+.header .logo {
+  display: none !important;
+}
+
+/* ===== Hero v3: timeline is hidden over the hero and appears after it ===== */
+.timeline {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-10px);
+  transition: opacity .35s ease, transform .35s ease, visibility .35s;
+}
+.timeline.timeline-visible {
+  opacity: .82;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+.timeline-dot {
+  cursor: pointer;
+}
+.timeline-dot:focus-visible {
+  outline: none;
+  transform: scale(1.45);
+  box-shadow: 0 0 18px rgba(193,138,255,.9);
+}
+
+/* ===== Hero v3: richer rotating terminal ===== */
+.hero-refined-terminal {
+  width: min(100%, 590px);
+}
+.hero-terminal-window {
+  transition: transform .18s ease, box-shadow .25s ease;
+}
+.hero-terminal-bar {
+  justify-content: flex-start;
+}
+.hero-terminal-live {
+  margin-left: auto;
+  color: var(--green);
+  font: 700 8px/1 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  letter-spacing: .14em;
+}
+.hero-terminal-rotating {
+  min-height: 1.8em;
+  transition: opacity .18s ease, transform .18s ease;
+}
+.hero-terminal-rotating.is-changing {
+  opacity: 0;
+  transform: translateY(4px);
+}
+.hero-terminal-meta {
+  display: flex;
+  justify-content: flex-end;
+  gap: .35rem;
+  margin-top: .7rem;
+  color: #5f5c68;
+  font: 600 9px/1 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  letter-spacing: .1em;
+}
+.hero-terminal-meta #terminal-index {
+  color: var(--purple2);
+}
+.hero-terminal-output-purple { color: var(--purple2); }
+.hero-terminal-output-blue { color: #5aa7ff; }
+.hero-terminal-output-orange { color: #ffad52; }
+
+@media(max-width:700px) {
+  .header .logo { display:none !important; }
+  .hero-refined-terminal { width:100%; max-width:590px; }
+}
+
+/* ===== v4: header layout fix ===== */
+.header {
+  justify-content: flex-end;
+}
+.header .nav {
+  margin-left: auto;
+}
+
+/* ===== v4: terminal proportions fix ===== */
+.hero-refined-terminal {
+  width: min(100%, 540px);
+  max-width: 540px;
+}
+.hero-terminal-window {
+  min-height: 0 !important;
+}
+.hero-terminal-window .hero-terminal-body,
+.hero-terminal-window .terminal-body {
+  min-height: 250px !important;
+  height: 250px;
+  padding: 1.6rem 1.5rem 1.4rem !important;
+}
+.hero-terminal-window .hero-terminal-output {
+  margin-top: .5rem;
+}
+.hero-terminal-window .hero-terminal-cursor {
+  margin-top: .9rem !important;
+}
+.hero-terminal-window .hero-terminal-meta {
+  margin-top: .55rem;
+}
+@media (max-width: 1050px) {
+  .hero-refined-terminal {
+    width: min(100%, 500px);
+    max-width: 500px;
+  }
+  .hero-terminal-window .hero-terminal-body,
+  .hero-terminal-window .terminal-body {
+    height: 220px;
+    min-height: 220px !important;
+  }
+}
+@media (max-width: 700px) {
+  .header {
+    justify-content: flex-end;
+  }
+  .hero-refined-terminal {
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero-terminal-window .hero-terminal-body,
+  .hero-terminal-window .terminal-body {
+    height: 210px;
+    min-height: 210px !important;
+  }
+}

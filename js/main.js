@@ -75,3 +75,76 @@
     link.classList.add('active');
   }));
 })();
+
+
+/* ===== Hero v3 behavior ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const hero = document.querySelector('#home');
+  const timeline = document.querySelector('.timeline');
+  const timelineDots = [...document.querySelectorAll('.timeline-dot')];
+  const sections = [...document.querySelectorAll('main section[id]')];
+
+  // Timeline is completely hidden while the hero is in view.
+  const updateTimelineVisibility = () => {
+    if (!hero || !timeline) return;
+    timeline.classList.toggle('timeline-visible', hero.getBoundingClientRect().bottom <= 8);
+  };
+  updateTimelineVisibility();
+  window.addEventListener('scroll', updateTimelineVisibility, { passive: true });
+  window.addEventListener('resize', updateTimelineVisibility);
+
+  // Dots are actual navigation controls and stay synchronized with sections.
+  timelineDots.forEach(dot => {
+    dot.addEventListener('click', event => {
+      event.preventDefault();
+      const target = document.querySelector(dot.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  if (sections.length && timelineDots.length) {
+    const dotObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const hash = '#' + entry.target.id;
+        timelineDots.forEach(dot => {
+          dot.classList.toggle('active', dot.getAttribute('href') === hash);
+        });
+      });
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+
+    sections.forEach(section => dotObserver.observe(section));
+  }
+
+  // Five rotating terminal snapshots.
+  const command = document.querySelector('#terminal-command');
+  const output = document.querySelector('#terminal-output');
+  const index = document.querySelector('#terminal-index');
+  const total = document.querySelector('#terminal-total');
+
+  const items = [
+    ['status', '<span class="green">●</span> building &amp; learning'],
+    ['focus', '<span class="hero-terminal-output-purple">→</span> Android internals &amp; custom ROMs'],
+    ['stack', '<span class="hero-terminal-output-blue">◆</span> Kotlin · Java · C/C++ · Python'],
+    ['working-on', '<span class="hero-terminal-output-orange">↳</span> open-source projects &amp; experiments'],
+    ['exploring', '<span class="green">●</span> Linux · automation · the web']
+  ];
+
+  let current = 0;
+  if (total) total.textContent = String(items.length).padStart(2, '0');
+
+  const rotateTerminal = () => {
+    if (!command || !output || !index) return;
+
+    output.classList.add('is-changing');
+    setTimeout(() => {
+      command.textContent = items[current][0];
+      output.innerHTML = items[current][1];
+      index.textContent = String(current + 1).padStart(2, '0');
+      output.classList.remove('is-changing');
+      current = (current + 1) % items.length;
+    }, 180);
+  };
+
+  setInterval(rotateTerminal, 2800);
+});
