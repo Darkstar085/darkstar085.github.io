@@ -54,7 +54,7 @@
       if (name) name.textContent = (data.name || 'SIPUN').toUpperCase().replace(/\s+/g, ' ');
       if (bio) bio.textContent = data.bio || 'Android & Open Source';
     } catch {
-      // Keep the static fallback values if GitHub is unavailable.
+
     }
   }
   loadGithub();
@@ -76,15 +76,12 @@
   }));
 })();
 
-
-/* ===== Hero v3 behavior ===== */
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('#home');
   const timeline = document.querySelector('.timeline');
   const timelineDots = [...document.querySelectorAll('.timeline-dot')];
   const sections = [...document.querySelectorAll('main section[id]')];
 
-  // Timeline is completely hidden while the hero is in view.
   const updateTimelineVisibility = () => {
     if (!hero || !timeline) return;
     timeline.classList.toggle('timeline-visible', hero.getBoundingClientRect().bottom <= 8);
@@ -93,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateTimelineVisibility, { passive: true });
   window.addEventListener('resize', updateTimelineVisibility);
 
-  // Dots are actual navigation controls and stay synchronized with sections.
   timelineDots.forEach(dot => {
     dot.addEventListener('click', event => {
       event.preventDefault();
@@ -116,13 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => dotObserver.observe(section));
   }
 
-  // Five rotating terminal snapshots.
   const command = document.querySelector('#terminal-command');
   const output = document.querySelector('#terminal-output');
-  const index = document.querySelector('#terminal-index');
-  const total = document.querySelector('#terminal-total');
-
-  const items = [
+const items = [
     ['status', '<span class="green">●</span> building &amp; learning'],
     ['focus', '<span class="hero-terminal-output-purple">→</span> Android internals &amp; custom ROMs'],
     ['stack', '<span class="hero-terminal-output-blue">◆</span> Kotlin · Java · C/C++ · Python'],
@@ -131,20 +123,52 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   let current = 0;
-  if (total) total.textContent = String(items.length).padStart(2, '0');
-
-  const rotateTerminal = () => {
+const rotateTerminal = () => {
     if (!command || !output || !index) return;
 
     output.classList.add('is-changing');
     setTimeout(() => {
       command.textContent = items[current][0];
       output.innerHTML = items[current][1];
-      index.textContent = String(current + 1).padStart(2, '0');
-      output.classList.remove('is-changing');
+output.classList.remove('is-changing');
       current = (current + 1) % items.length;
     }, 180);
   };
 
   setInterval(rotateTerminal, 2800);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const ticker = document.querySelector('#terminal-command-ticker');
+  if (!ticker) return;
+
+  const commands = [
+    'sudo apt update',
+    'sudo apt upgrade',
+    'ls -la',
+    'cd ~/projects',
+    'git status',
+    'git log --oneline',
+    'htop',
+    'neofetch',
+    'adb devices',
+    'fastboot devices',
+    'make -j$(nproc)',
+    './build.sh'
+  ];
+
+  let current = 0;
+
+  const rotateCommand = () => {
+    ticker.classList.add('is-changing');
+    window.setTimeout(() => {
+      ticker.textContent = commands[current];
+      ticker.classList.remove('is-changing');
+      current = (current + 1) % commands.length;
+    }, 180);
+  };
+
+  ticker.textContent = commands[0];
+  current = 1;
+  window.setInterval(rotateCommand, 2200);
 });
