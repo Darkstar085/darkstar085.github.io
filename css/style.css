@@ -14,3 +14,329 @@
 @media(max-width:1050px){.hero{grid-template-columns:1fr .8fr}.hero-visual{display:none}.hero-side{justify-self:end}.about-grid{grid-template-columns:1fr}.skills-grid,.projects-grid{grid-template-columns:repeat(2,1fr)}.github-panel{grid-template-columns:1fr}.contact-grid{grid-template-columns:repeat(2,1fr)}.timeline{left:24px}}
 @media(max-width:700px){.header{padding:0 1rem}.menu-toggle{display:grid;gap:4px;padding:.5rem;cursor:pointer}.menu-toggle span:not(.sr-only){width:22px;height:2px;background:#fff}.nav{position:absolute;top:72px;left:1rem;right:1rem;display:none;padding:.7rem;flex-direction:column;background:rgba(14,14,20,.97);border:1px solid var(--line);border-radius:14px}.nav.open{display:flex}.nav a{padding:.65rem}.hero{grid-template-columns:1fr;min-height:auto;padding-top:5rem}.hero-side{justify-self:start}.hero h1{font-size:4rem}.section{padding:4.4rem 1.1rem}.skills-grid,.projects-grid,.contact-grid{grid-template-columns:1fr}.about-left{align-items:flex-start;flex-direction:column}.about-profile{width:min(100%,230px);flex-basis:auto}.profile-details{grid-template-columns:1fr}.github-stats{grid-template-columns:repeat(2,1fr)}.github-stats>div:nth-child(2){border-right:0}.github-stats>div:nth-child(-n+2){border-bottom:1px solid var(--line)}.footer{flex-direction:column;text-align:center}.timeline{display:none}.github-profile-head{align-items:flex-start;flex-direction:column}.github-profile-button{align-self:flex-start}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+
+/* =========================================================
+   REFINED HERO
+   Only the #home hero is changed. All sections below it
+   keep their existing markup and styles.
+   ========================================================= */
+
+.hero-refined {
+  min-height: calc(100vh - 82px);
+  padding-top: 3.5rem;
+  padding-bottom: 4.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(420px, .85fr);
+  align-items: center;
+  gap: clamp(3rem, 7vw, 8rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-refined::before {
+  content: "";
+  position: absolute;
+  width: 680px;
+  height: 680px;
+  right: -300px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(155,92,255,.15), transparent 66%);
+  pointer-events: none;
+}
+
+.hero-refined-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+}
+
+.hero-kicker {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .58rem;
+  margin: 0 0 2.5rem;
+  color: var(--purple2);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  line-height: 1.4;
+}
+
+.hero-status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 13px rgba(103,245,163,.85);
+}
+
+.hero-refined h1 {
+  margin: 0;
+  color: #f5f4f8;
+  font-size: clamp(5rem, 8.3vw, 9rem);
+  font-weight: 850;
+  letter-spacing: -.078em;
+  line-height: .84;
+}
+
+.hero-refined h1 > span {
+  display: block;
+}
+
+.hero-refined h1 .gradient-text {
+  background: linear-gradient(100deg, #f8f7fa 4%, #c88cff 74%, #aa69ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-refined-intro {
+  max-width: 680px;
+  margin: 2.55rem 0 0;
+  color: #aaa8b6;
+  font-size: clamp(1rem, 1.25vw, 1.22rem);
+  line-height: 1.72;
+  letter-spacing: -.012em;
+}
+
+.hero-refined-intro strong {
+  color: #f4f3f8;
+  font-weight: 750;
+}
+
+.hero-refined-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1.8rem;
+}
+
+.hero-refined-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  min-height: 46px;
+  padding: .75rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: .84rem;
+  font-weight: 750;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.hero-refined-button:hover {
+  transform: translateY(-2px);
+}
+
+.hero-refined-button.primary {
+  color: #0b0711;
+  background: #c88cff;
+  box-shadow: 0 12px 32px rgba(155,92,255,.18);
+}
+
+.hero-refined-button.primary:hover {
+  background: #d49cff;
+}
+
+.hero-refined-button.secondary {
+  color: #dedce6;
+  border: 1px solid rgba(255,255,255,.11);
+  background: rgba(255,255,255,.025);
+}
+
+.hero-refined-button.secondary:hover {
+  border-color: rgba(193,138,255,.45);
+  background: rgba(155,92,255,.06);
+}
+
+.hero-refined-terminal {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 590px);
+  justify-self: end;
+}
+
+.hero-terminal-window {
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(19,18,27,.94), rgba(12,11,17,.92));
+  box-shadow:
+    0 35px 100px rgba(0,0,0,.45),
+    0 0 80px rgba(106,48,180,.10);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform .18s ease;
+}
+
+.hero-terminal-bar {
+  height: 58px;
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+  color: #777583;
+  border-bottom: 1px solid rgba(255,255,255,.09);
+  font: 11px/1 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.hero-terminal-dots {
+  display: flex;
+  gap: 8px;
+  margin-right: 1.3rem;
+}
+
+.hero-terminal-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #484650;
+}
+
+.hero-terminal-body {
+  min-height: 360px;
+  padding: 2.4rem 2rem 2rem;
+  color: #e6e3eb;
+  font: 14px/1.7 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.hero-terminal-command {
+  display: flex;
+  gap: .8rem;
+  font-weight: 650;
+}
+
+.hero-terminal-command > span {
+  color: #c88cff;
+}
+
+.hero-terminal-command.gap {
+  margin-top: 1rem;
+}
+
+.hero-terminal-output {
+  padding-left: 1.65rem;
+  margin-top: .4rem;
+  color: #d6d2dc;
+}
+
+.hero-terminal-output.purple {
+  color: #c4a8ff;
+}
+
+.hero-terminal-output.status {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+}
+
+.hero-terminal-output.status i {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 10px rgba(103,245,163,.8);
+}
+
+.hero-terminal-cursor {
+  display: block;
+  width: 11px;
+  height: 22px;
+  margin-top: 1.05rem;
+  background: #c88cff;
+  animation: hero-terminal-blink 1s steps(1) infinite;
+}
+
+@keyframes hero-terminal-blink {
+  0%, 48% { opacity: 1; }
+  49%, 100% { opacity: 0; }
+}
+
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .hero-terminal-window:hover {
+    transform: perspective(1100px) rotateX(1deg) rotateY(-1.5deg) translateY(-2px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero-refined {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero-refined-copy {
+    max-width: 800px;
+  }
+
+  .hero-refined-terminal {
+    justify-self: start;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-refined {
+    width: calc(100% - 2.25rem);
+    padding-top: 3rem;
+    padding-bottom: 4.5rem;
+    gap: 2.8rem;
+  }
+
+  .hero-kicker {
+    margin-bottom: 2rem;
+    font-size: .64rem;
+    letter-spacing: .14em;
+  }
+
+  .hero-refined h1 {
+    font-size: clamp(4rem, 18vw, 6rem);
+    letter-spacing: -.075em;
+  }
+
+  .hero-refined-intro {
+    margin-top: 2rem;
+    font-size: .98rem;
+  }
+
+  .hero-refined-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-refined-button {
+    width: 100%;
+  }
+
+  .hero-terminal-bar {
+    height: 52px;
+  }
+
+  .hero-terminal-body {
+    min-height: 315px;
+    padding: 1.8rem 1.25rem;
+    font-size: 12px;
+  }
+
+  .hero-terminal-output {
+    padding-left: 1.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-terminal-cursor {
+    animation: none;
+  }
+
+  .hero-refined-button,
+  .hero-terminal-window {
+    transition: none;
+  }
+}
