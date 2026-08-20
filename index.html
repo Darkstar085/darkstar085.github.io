@@ -19,7 +19,10 @@
 <a href="#projects"><i data-lucide="folder-kanban"></i><span>Projects</span></a>
 <a href="#contact"><i data-lucide="send"></i><span>Contact</span></a>
 </div>
-<a class="nav-github" href="https://github.com/Darkstar085" target="_blank" rel="noreferrer"><i data-lucide="github"></i> GitHub</a>
+<button class="theme-toggle" type="button" aria-label="Theme switcher — coming in v10" title="Theme switcher — coming in v10">
+  <span class="theme-icon"><i data-lucide="sun"></i></span>
+  <span class="theme-label">Theme</span>
+</button>
 <button class="menu" aria-label="Open menu"><i data-lucide="menu"></i></button>
 </nav>
 
@@ -50,14 +53,14 @@
 <div class="section-head reveal"><span class="section-number">02</span><div><p class="eyebrow">WORK + TOOLKIT</p><h2>What I work with<br><span>and how I build.</span></h2><p class="section-subtitle">The technologies and tools I use to build, customize, automate and ship.</p></div></div>
 
 <div class="work-grid">
-<a class="work-card android reveal" href="#stack"><span class="icon-badge android-badge"><i data-lucide="smartphone"></i></span><span>01</span><h3>Android</h3><p>Custom ROMs, Android internals, device trees and AOSP development.</p><small>AOSP · Custom ROMs · Device Trees</small></a>
+<a class="work-card android reveal" href="#stack"><span class="icon-badge android-badge"><i data-lucide="smartphone"></i></span><span>01</span><h3>Android</h3><p>Custom ROMs, Android internals, device trees and AOSP development.</p><small class="accent-chip">AOSP · Custom ROMs · Device Trees</small></a>
 <a class="work-card opensource reveal" href="https://github.com/Darkstar085" target="_blank"><span class="icon-badge github-badge" aria-label="GitHub">
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.17c-3.23.7-3.91-1.38-3.91-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.58-.29-5.29-1.29-5.29-5.75 0-1.27.45-2.3 1.19-3.11-.12-.29-.52-1.47.11-3.07 0 0 .97-.31 3.17 1.19a11 11 0 0 1 5.77 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.6.23 2.78.11 3.07.74.81 1.19 1.84 1.19 3.11 0 4.47-2.72 5.45-5.31 5.74.42.36.78 1.08.78 2.18v3.23c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5Z"/>
       </svg>
-    </span><span>02</span><h3>Open Source</h3><p>Open-source projects, reusable code and community-driven development.</p><small>GitHub · Open Source · Community</small></a>
-<a class="work-card linux reveal" href="#stack"><span class="icon-badge linux-badge"><i data-lucide="terminal"></i></span><span>03</span><h3>Linux</h3><p>Linux tooling, command-line workflows, servers and build systems.</p><small>Bash · Linux · Build</small></a>
-<a class="work-card web reveal" href="#stack"><span class="icon-badge web-badge"><i data-lucide="globe-2"></i></span><span>04</span><h3>Web</h3><p>Clean interfaces, developer tools and responsive web experiences.</p><small>HTML · CSS · JavaScript</small></a>
+    </span><span>02</span><h3>Open Source</h3><p>Open-source projects, reusable code and community-driven development.</p><small class="accent-chip">GitHub · Open Source · Community</small></a>
+<a class="work-card linux reveal" href="#stack"><span class="icon-badge linux-badge"><i data-lucide="terminal"></i></span><span>03</span><h3>Linux</h3><p>Linux tooling, command-line workflows, servers and build systems.</p><small class="accent-chip">Bash · Linux · Build</small></a>
+<a class="work-card web reveal" href="#stack"><span class="icon-badge web-badge"><i data-lucide="globe-2"></i></span><span>04</span><h3>Web</h3><p>Clean interfaces, developer tools and responsive web experiences.</p><small class="accent-chip">HTML · CSS · JavaScript</small></a>
 </div>
 
 <div id="stack" class="toolkit-block">
@@ -84,16 +87,15 @@
 </section>
 
 <section id="projects" class="section">
-<div class="section-head reveal"><span class="section-number">02</span><div><p class="eyebrow">03 / PROJECTS</p><h2>Things I've<br><span>built & maintained.</span></h2></div></div>
-<div class="projects">
-<a class="project reveal" href="https://github.com/Darkstar085/device_xiaomi_land" target="_blank"><div class="project-icon purple-icon"><i data-lucide="smartphone"></i></div><span class="project-arrow">↗</span><p>01 / DEVICE TREE</p><h3>device_xiaomi_land</h3><span class="project-desc">Xiaomi Redmi 3S/X/Prime device tree work for custom Android builds.</span><div class="tags"><i>C++</i><i>Android</i><i>Device Tree</i></div></a>
-<a class="project featured reveal" href="https://github.com/Darkstar085/device_xiaomi_whyred" target="_blank"><div class="project-icon blue-icon"><i data-lucide="code-2"></i></div><span class="project-arrow">↗</span><p>02 / AOSP</p><h3>device_xiaomi_whyred</h3><span class="project-desc">Redmi Note 5 Pro device support and custom ROM development.</span><div class="tags"><i>AOSP</i><i>C++</i><i>Whyred</i></div></a>
-<a class="project reveal" href="https://github.com/Darkstar085/device_oneplus_avicii" target="_blank"><div class="project-icon green-icon"><i data-lucide="smartphone"></i></div><span class="project-arrow">↗</span><p>03 / DEVICE TREE</p><h3>device_oneplus_avicii</h3><span class="project-desc">OnePlus Nord device tree work for custom ROM development.</span><div class="tags"><i>Shell</i><i>Android</i><i>Avicii</i></div></a>
-<a class="project reveal" href="https://github.com/Darkstar085/scripts" target="_blank"><div class="project-icon orange-icon"><i data-lucide="terminal"></i></div><span class="project-arrow">↗</span><p>04 / AUTOMATION</p><h3>scripts</h3><span class="project-desc">Utilities that automate repetitive development and build tasks.</span><div class="tags"><i>Bash</i><i>Automation</i></div></a>
-<a class="project reveal" href="https://github.com/Darkstar085/odisha-epaper" target="_blank"><div class="project-icon cyan-icon"><i data-lucide="bot"></i></div><span class="project-arrow">↗</span><p>05 / AUTOMATION</p><h3>odisha-epaper</h3><span class="project-desc">Automated e-paper workflow using Python and GitHub Actions.</span><div class="tags"><i>Python</i><i>GitHub Actions</i></div></a>
-<a class="project all-projects reveal" href="https://github.com/Darkstar085" target="_blank"><p>06 / MORE</p><h3>Explore all repositories</h3><span class="big-arrow">→</span></a>
-</div></section>
-
+<div class="section-head reveal"><span class="section-number">03</span><div>
+<p class="eyebrow">03 / PROJECTS</p>
+<h2>Latest things<br><span>I've built.</span></h2>
+<p class="section-subtitle">Automatically synced from my GitHub repositories. The five featured projects below are refreshed daily.</p>
+</div></div>
+<div id="project-grid" class="projects dynamic-projects" aria-live="polite">
+  <div class="project-loading">Loading projects…</div>
+</div>
+</section>
 
 <section id="contact" class="contact section">
 <div class="contact-inner reveal">
@@ -115,11 +117,11 @@
   </span>
   <span><b>Instagram</b><small>@Darkstar085</small></span>
 </a>
-<a class="contact-card telegram-card" href="https://t.me/darkstar_085" target="_blank" rel="noreferrer">
+<a class="contact-card telegram-card" href="https://t.me/Darkstar085" target="_blank" rel="noreferrer">
   <span class="contact-icon telegram-icon" aria-label="Telegram">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 3.6 18.4 20c-.24 1.16-.9 1.45-1.83.91l-5.04-3.72-2.43 2.34c-.27.27-.5.5-1.03.5l.37-5.13 9.34-8.44c.41-.37-.09-.58-.64-.21L5.58 13.1.62 11.55c-1.08-.34-1.1-1.08.23-1.58L20.24 2.5c.9-.33 1.69.21 1.36 1.1Z"/></svg>
   </span>
-  <span><b>Telegram</b><small>@darkstar_085</small></span>
+  <span><b>Telegram</b><small>@Darkstar085</small></span>
 </a>
 <div class="contact-note">
   <i data-lucide="message-circle"></i>
