@@ -440,3 +440,65 @@ body.light-theme .contact-note{
     font-size:clamp(48px,5vw,68px);
   }
 }
+
+/* v11.2 — final light-theme consistency + nav fix */
+body.light-theme .contact{
+  background:
+    radial-gradient(circle at 80% 0%, rgba(112,64,217,.08), transparent 34%),
+    linear-gradient(145deg,#ffffff,#f8f8f7);
+  color:#17171b;
+  border:1px solid #dedee3;
+}
+body.light-theme .contact h2{
+  color:#17171b;
+}
+body.light-theme .contact-copy>p:not(.eyebrow){
+  color:#555562;
+}
+body.light-theme .contact-card,
+body.light-theme .contact-note{
+  background:#ffffff;
+  border-color:#dedee3;
+  box-shadow:0 8px 28px rgba(26,26,34,.05);
+}
+body.light-theme .contact-card b,
+body.light-theme .contact-note b{
+  color:#17171b;
+}
+body.light-theme .contact-card small,
+body.light-theme .contact-note small{
+  color:#6d6d78;
+}
+body.light-theme .contact-card svg,
+body.light-theme .contact-note svg{
+  opacity:1;
+}
+
+/* Navigation should never collapse an item into a blank pill. */
+.nav-links{
+  display:flex!important;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+  grid-template-columns:none!important;
+}
+.nav-links a{
+  display:inline-flex!important;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  min-width:auto!important;
+  width:auto!important;
+  color:var(--muted);
+}
+.nav-links a span{
+  display:inline!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+body.light-theme .nav-links a{
+  color:#666672;
+}
+body.light-theme .nav-links a.active{
+  color:#17171b!important;
+}
