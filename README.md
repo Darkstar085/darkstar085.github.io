@@ -68,3 +68,7 @@ The project can be deployed directly to GitHub Pages or any static hosting provi
 ## License
 
 This project is released under the MIT License. See [`LICENSE`](LICENSE).
+
+
+## Favicon
+The site uses a bundled Darkstar mark in `assets/favicon.svg`, `assets/favicon.png`, and `assets/favicon.ico`. No external icon host is required.
