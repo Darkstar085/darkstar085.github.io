@@ -1,11 +1,47 @@
 [
   {
-    "name": "GitHub Projects",
-    "html_url": "https://github.com/Darkstar085?tab=repositories",
-    "description": "Browse the latest open-source repositories and development work.",
-    "language": "GitHub",
-    "stargazers_count": 0,
-    "category": "REPOSITORIES",
-    "updated_label": "daily sync"
+    "name": "device_xiaomi_whyred",
+    "html_url": "https://github.com/Darkstar085/device_xiaomi_whyred",
+    "description": "Device Tree For Redmi Note 5 Pro (Whyred)",
+    "language": "C++",
+    "stargazers_count": 4,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Jan 2026"
+  },
+  {
+    "name": "Superiorwalls",
+    "html_url": "https://github.com/Darkstar085/Superiorwalls",
+    "description": "Open-source project by Darkstar085.",
+    "language": "Kotlin",
+    "stargazers_count": 4,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Nov 2025"
+  },
+  {
+    "name": "vendor_xiaomi_whyred",
+    "html_url": "https://github.com/Darkstar085/vendor_xiaomi_whyred",
+    "description": "Vendor blobs tree for Redmi Note 5 Pro (Whyred)",
+    "language": "Makefile",
+    "stargazers_count": 3,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Jan 2026"
+  },
+  {
+    "name": "device_oneplus_avicii",
+    "html_url": "https://github.com/Darkstar085/device_oneplus_avicii",
+    "description": "Device Tree for Oneplus Nord",
+    "language": "Shell",
+    "stargazers_count": 2,
+    "category": "GITHUB PROJECT",
+    "updated_label": "May 2026"
+  },
+  {
+    "name": "kernel_xiaomi_whyred",
+    "html_url": "https://github.com/Darkstar085/kernel_xiaomi_whyred",
+    "description": "Kernel tree for Redmi Note 5 Pro (Whyred)",
+    "language": "C",
+    "stargazers_count": 2,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Jan 2026"
   }
 ]
