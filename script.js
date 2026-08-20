@@ -43,3 +43,30 @@ function projectIcon(language){
   return map[language]||"folder-git-2";
 }
 loadProjects();
+
+/* v10: persistent light/dark theme switcher */
+(function(){
+  const button = document.querySelector("#theme-toggle");
+  if(!button) return;
+  const saved = localStorage.getItem("darkstar-theme");
+  const preferredLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+  const initial = saved || (preferredLight ? "light" : "dark");
+
+  function applyTheme(theme){
+    const light = theme === "light";
+    document.body.classList.toggle("light-theme", light);
+    button.setAttribute("aria-label", light ? "Switch to dark theme" : "Switch to light theme");
+    button.setAttribute("title", light ? "Switch to dark theme" : "Switch to light theme");
+    const icon = button.querySelector("[data-lucide]");
+    if(icon){
+      icon.setAttribute("data-lucide", light ? "moon" : "sun");
+      if(window.lucide) lucide.createIcons();
+    }
+    localStorage.setItem("darkstar-theme", theme);
+  }
+
+  applyTheme(initial);
+  button.addEventListener("click", function(){
+    applyTheme(document.body.classList.contains("light-theme") ? "dark" : "light");
+  });
+})();
