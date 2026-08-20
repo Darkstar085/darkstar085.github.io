@@ -502,3 +502,66 @@ body.light-theme .nav-links a{
 body.light-theme .nav-links a.active{
   color:#17171b!important;
 }
+
+/* v11.3 — fix the actual Contact container in light theme */
+body.light-theme .contact-inner{
+  background:
+    radial-gradient(circle at 80% 0%, rgba(112,64,217,.075), transparent 34%),
+    radial-gradient(circle at 15% 100%, rgba(56,189,248,.045), transparent 30%),
+    #ffffff !important;
+  color:#17171b !important;
+  border-color:#dedee3 !important;
+  box-shadow:0 20px 60px rgba(25,25,35,.07) !important;
+}
+body.light-theme .contact-inner .contact-copy h2,
+body.light-theme .contact-inner .contact-copy h2 span{
+  color:#17171b !important;
+}
+body.light-theme .contact-inner .contact-copy h2 span{
+  color:#6d3bd1 !important;
+}
+body.light-theme .contact-inner .contact-copy>p:not(.eyebrow){
+  color:#555562 !important;
+}
+body.light-theme .contact-inner .contact-card,
+body.light-theme .contact-inner .contact-note{
+  background:#f9f9f8 !important;
+  color:#17171b !important;
+  border-color:#dedee3 !important;
+}
+body.light-theme .contact-inner .contact-card b,
+body.light-theme .contact-inner .contact-note b{
+  color:#17171b !important;
+}
+body.light-theme .contact-inner .contact-card small,
+body.light-theme .contact-inner .contact-note small{
+  color:#6d6d78 !important;
+}
+
+/* v11.3 — explicit navigation labels; never render an empty active tab */
+.nav-links a{
+  flex:0 0 auto !important;
+  visibility:visible !important;
+}
+.nav-links a > span{
+  display:inline-block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  color:inherit !important;
+  font-size:12px !important;
+  line-height:1 !important;
+}
+.nav-links a.active > span{
+  color:#f4f4f6 !important;
+}
+body.light-theme .nav-links a.active > span{
+  color:#17171b !important;
+}
+
+/* v11.4 navigation: the active tab must be the visible destination, never an empty pill. */
+.nav-links{min-width:max-content}
+.nav-links a{min-width:auto !important;white-space:nowrap;visibility:visible !important}
+.nav-links a>span{display:inline-block !important;visibility:visible !important;opacity:1 !important}
+.nav-links a.active:before{display:none}
+.nav-links a.active{background:#181421;color:#fff !important;box-shadow:inset 0 0 0 1px #33274a}
+body.light-theme .nav-links a.active{background:#fff;color:#17171b !important;box-shadow:inset 0 0 0 1px #d6d6dd}

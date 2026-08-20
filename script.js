@@ -1,9 +1,28 @@
 const glow=document.querySelector(".cursor-glow");window.addEventListener("pointermove",e=>{if(glow){glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px"}});if(window.lucide)lucide.createIcons();
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.12});document.querySelectorAll(".reveal").forEach((el,i)=>{el.style.transitionDelay=(i%4)*70+"ms";observer.observe(el)});
 const links=[...document.querySelectorAll(".nav-links a")];
-const sections=links.map(a=>document.querySelector(a.getAttribute("href"))).filter(Boolean);
-const spy=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.remove("active"));const x=links.find(a=>a.getAttribute("href")==="#"+e.target.id);x?.classList.add("active")}}),{rootMargin:"-35% 0px -55% 0px"});sections.forEach(s=>spy.observe(s));
-const menu=document.querySelector(".menu"),nav=document.querySelector(".nav-links");menu?.addEventListener("click",()=>nav.classList.toggle("open"));links.forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")));
+// Keep the nav state tied to real page sections. The old observer watched <main> for #home,
+// which could make the About tab become active while the user was still on the home page.
+const sectionTargets=links.map(a=>{
+  const href=a.getAttribute("href");
+  return href==="#home" ? document.querySelector(".hero") : document.querySelector(href);
+}).filter(Boolean);
+function setActive(id){
+  links.forEach(a=>a.classList.toggle("active", a.getAttribute("href")===`#${id}`));
+}
+setActive("home");
+const spy=new IntersectionObserver(entries=>{
+  const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+  if(visible) setActive(visible.target.id || "home");
+},{rootMargin:"-25% 0px -60% 0px",threshold:[0,.15,.35,.6]});
+sectionTargets.forEach(s=>spy.observe(s));
+window.addEventListener("scroll",()=>{
+  if(window.scrollY < 120) setActive("home");
+},{passive:true});
+const menu=document.querySelector(".menu"),nav=document.querySelector(".nav-links");menu?.addEventListener("click",()=>nav.classList.toggle("open"));links.forEach(a=>a.addEventListener("click",()=>{
+  nav.classList.remove("open");
+  setActive(a.getAttribute("href").slice(1));
+}));
 
 /* v9: fetch the daily-generated GitHub project list */
 async function loadProjects(){
