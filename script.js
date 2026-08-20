@@ -17,7 +17,7 @@ async function loadProjects(){
     grid.innerHTML=projects.slice(0,5).map((p,i)=>`
       <a class="project reveal" data-repo href="${escapeHtml(p.html_url)}" target="_blank" rel="noreferrer">
         <div class="project-icon ${projectTone(i)}"><i data-lucide="${projectIcon(p.language)}"></i></div>
-        <span class="project-arrow" aria-hidden="true">#${String(i+1).padStart(2,"0")}</span>
+        
         <p>${escapeHtml(p.category || "GITHUB PROJECT")}</p>
         <h3>${escapeHtml(p.name)}</h3>
         <span class="project-desc">${escapeHtml(p.description || "Open-source project by Darkstar085.")}</span>
