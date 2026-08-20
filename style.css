@@ -54,3 +54,18 @@
 @media(max-width:1100px){.tool-tiles{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:700px){.work-card{min-height:330px}.tool-tiles{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:500px){.tool-tiles{grid-template-columns:repeat(2,1fr)}.work-preview{height:120px}}
+
+/* v7 icon and contact fixes */
+.github-badge svg{width:21px;height:21px;fill:currentColor;display:block}
+.contact-cards{grid-template-columns:repeat(3,1fr)}
+.contact-card{min-height:125px}
+.contact-icon svg{width:21px;height:21px;display:block}
+.x-icon svg{fill:currentColor}
+.insta-icon svg{fill:none;stroke:currentColor;stroke-width:2}
+.insta-icon svg circle:last-child{fill:currentColor;stroke:none}
+.telegram-icon svg{fill:currentColor}
+.telegram-card .contact-icon{color:#39bdf8;background:#39bdf812;border:1px solid #39bdf833}
+.telegram-card:hover{border-color:#277ca2}
+.contact-note{grid-column:1/-1}
+@media(max-width:900px){.contact-cards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.contact-cards{grid-template-columns:1fr}}
