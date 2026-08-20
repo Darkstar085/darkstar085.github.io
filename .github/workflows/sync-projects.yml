@@ -16,12 +16,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Sync top 5 repositories
-        run: python scripts/sync_projects.py
+        run: python tools/sync_projects.py
 
       - name: Commit updated project list
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/projects.json
+          git add data/featured-projects.json
           git diff --cached --quiet || git commit -m "chore: sync featured GitHub projects"
           git push

@@ -6,7 +6,7 @@ from pathlib import Path
 
 OWNER = "Darkstar085"
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "projects.json"
+OUT = ROOT / "data" / "featured-projects.json"
 
 def fetch_repos():
     url = f"https://api.github.com/users/{OWNER}/repos?per_page=100&sort=updated"

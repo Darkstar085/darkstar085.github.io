@@ -1,4 +1,29 @@
-const glow=document.querySelector(".cursor-glow");window.addEventListener("pointermove",e=>{if(glow){glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px"}});if(window.lucide)lucide.createIcons();
+
+/* Local icon system: every UI icon is served from assets/icons/*.svg */
+async function hydrateIcons(scope=document){
+  const nodes=[...scope.querySelectorAll("[data-icon]")];
+  await Promise.all(nodes.map(async node=>{
+    const name=node.getAttribute("data-icon");
+    if(!name) return;
+    try{
+      const res=await fetch(`assets/icons/${encodeURIComponent(name)}.svg`,{cache:"force-cache"});
+      if(!res.ok) throw new Error(name);
+      const markup=await res.text();
+      const tpl=document.createElement("template");
+      tpl.innerHTML=markup.trim();
+      const svg=tpl.content.firstElementChild;
+      if(!svg) throw new Error(name);
+      svg.setAttribute("aria-hidden","true");
+      svg.removeAttribute("width"); svg.removeAttribute("height");
+      svg.classList.add("local-icon");
+      node.replaceWith(svg);
+    }catch(err){
+      node.remove();
+      console.warn("Local icon unavailable:",name);
+    }
+  }));
+}
+const glow=document.querySelector(".cursor-glow");window.addEventListener("pointermove",e=>{if(glow){glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px"}});
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.12});document.querySelectorAll(".reveal").forEach((el,i)=>{el.style.transitionDelay=(i%4)*70+"ms";observer.observe(el)});
 const links=[...document.querySelectorAll(".nav-links a")];
 // Keep the nav state tied to real page sections. The old observer watched <main> for #home,
@@ -24,18 +49,18 @@ const menu=document.querySelector(".menu"),nav=document.querySelector(".nav-link
   setActive(a.getAttribute("href").slice(1));
 }));
 
-/* v9: fetch the daily-generated GitHub project list */
+/* Fetch the daily-generated GitHub project list */
 async function loadProjects(){
   const grid=document.querySelector("#project-grid");
   if(!grid) return;
   try{
-    const res=await fetch("data/projects.json", {cache:"no-store"});
+    const res=await fetch("data/featured-projects.json", {cache:"no-store"});
     if(!res.ok) throw new Error("projects.json unavailable");
     const projects=await res.json();
     if(!Array.isArray(projects) || !projects.length) throw new Error("No projects");
     grid.innerHTML=projects.slice(0,5).map((p,i)=>`
       <a class="project reveal" data-repo href="${escapeHtml(p.html_url)}" target="_blank" rel="noreferrer">
-        <div class="project-icon ${projectTone(i)}"><i data-lucide="${projectIcon(p.language)}"></i></div>
+        <div class="project-icon ${projectTone(i)}"><i data-icon="${projectIcon(p.language)}" aria-hidden="true"></i></div>
         
         <p>${escapeHtml(p.category || "GITHUB PROJECT")}</p>
         <h3>${escapeHtml(p.name)}</h3>
@@ -46,8 +71,9 @@ async function loadProjects(){
           <span>Updated ${escapeHtml(p.updated_label || "")}</span>
         </div>
       </a>`).join("");
-    if(window.lucide) lucide.createIcons();
+
     grid.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+    hydrateIcons(grid);
   }catch(err){
     grid.innerHTML='<div class="project-loading">Projects are temporarily unavailable. The daily GitHub sync will refresh this section automatically.</div>';
     console.warn(err);
@@ -63,7 +89,7 @@ function projectIcon(language){
 }
 loadProjects();
 
-/* v10: persistent light/dark theme switcher */
+/* Persistent light/dark theme switcher */
 (function(){
   const button = document.querySelector("#theme-toggle");
   if(!button) return;
@@ -76,10 +102,10 @@ loadProjects();
     document.body.classList.toggle("light-theme", light);
     button.setAttribute("aria-label", light ? "Switch to dark theme" : "Switch to light theme");
     button.setAttribute("title", light ? "Switch to dark theme" : "Switch to light theme");
-    const icon = button.querySelector("[data-lucide]");
+    const icon = button.querySelector(".local-icon, [data-icon]");
     if(icon){
-      icon.setAttribute("data-lucide", light ? "moon" : "sun");
-      if(window.lucide) lucide.createIcons();
+      icon.setAttribute("data-icon", light ? "moon" : "sun");
+  
     }
     localStorage.setItem("darkstar-theme", theme);
   }
@@ -89,3 +115,6 @@ loadProjects();
     applyTheme(document.body.classList.contains("light-theme") ? "dark" : "light");
   });
 })();
+
+
+document.addEventListener("DOMContentLoaded",()=>hydrateIcons());
