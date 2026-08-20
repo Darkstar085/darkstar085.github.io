@@ -368,3 +368,75 @@ body.light-theme .section-number{
 .section-number{display:none!important}
 .work-card>span:not(.icon-badge):not(.accent-chip),
 .project>span.project-arrow{display:none!important}
+
+/* v11.1 — layout correction after removing section numbers */
+.section-head{
+  grid-template-columns:minmax(0,1fr)!important;
+}
+.section-head>div{
+  min-width:0;
+}
+.section-head h2{
+  max-width:900px;
+}
+.section-subtitle{
+  max-width:760px;
+}
+
+/* Keep nav items compact and make the active item visibly readable. */
+.nav-links{
+  grid-template-columns:repeat(5,auto);
+}
+.nav-links a{
+  min-width:0;
+  white-space:nowrap;
+}
+.nav-links a.active{
+  color:var(--text)!important;
+}
+
+/* Light theme: keep the whole page in the light system, including Contact. */
+body.light-theme .contact{
+  background:#fff;
+  color:#17171b;
+  border-color:#dedee3;
+  box-shadow:0 20px 60px rgba(25,25,35,.07);
+}
+body.light-theme .contact h2{
+  color:#17171b;
+}
+body.light-theme .contact .eyebrow{
+  color:#6d3bd1;
+}
+body.light-theme .contact-copy>p:not(.eyebrow){
+  color:#555562;
+}
+body.light-theme .contact-card,
+body.light-theme .contact-note{
+  background:#f9f9f8;
+  border-color:#dedee3;
+}
+body.light-theme .contact-card b,
+body.light-theme .contact-note b{
+  color:#17171b;
+}
+body.light-theme .contact-card small,
+body.light-theme .contact-note small{
+  color:#777783;
+}
+body.light-theme .contact-icon{
+  box-shadow:none;
+}
+body.light-theme .contact-note{
+  color:#17171b;
+}
+
+/* Give the project section enough horizontal space for its heading and cards. */
+.dynamic-projects{
+  width:100%;
+}
+@media (min-width:901px){
+  .section-head h2{
+    font-size:clamp(48px,5vw,68px);
+  }
+}
