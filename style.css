@@ -22,3 +22,18 @@
 .contact-socials{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:760px;margin:28px 0 30px}.contact-socials a{display:flex;align-items:center;gap:12px;padding:15px;border:1px solid var(--line);background:#0b0b10;border-radius:12px;transition:.25s}.contact-socials a:hover{transform:translateY(-3px);border-color:#49495a;background:#11111a}.contact-socials>a>svg{width:18px;color:var(--purple)}.contact-socials span{display:flex;flex-direction:column;gap:3px}.contact-socials b{font-size:11px}.contact-socials small{font-size:9px;color:#666676}.contact-socials strong{margin-left:auto;color:#666676}
 @media(max-width:900px){.contact-socials{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.contact-socials{grid-template-columns:1fr}.toolkit-heading{align-items:start;flex-direction:column}}
+
+/* v5 visual polish */
+.work-card .icon-badge{width:40px;height:40px;border-radius:12px;display:grid;place-items:center}
+.github-badge{color:#b69cff;background:#8b5cf614;border:1px solid #8b5cf633}
+.github-badge svg{width:20px}
+.tool-tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.tool-tile{min-height:132px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#111119,#0a0a0f);padding:18px;display:flex;flex-direction:column;justify-content:space-between;transition:.28s var(--ease);position:relative;overflow:hidden}
+.tool-tile:after{content:"";position:absolute;width:90px;height:90px;right:-50px;bottom:-50px;border-radius:50%;background:var(--tile);opacity:.16;filter:blur(8px)}
+.tool-tile svg{width:22px;height:22px;color:var(--tile)}
+.tool-tile strong{font-size:13px;position:relative;z-index:1}.tool-tile span{font-size:9px;color:#686878;position:relative;z-index:1}.tool-tile:hover{transform:translateY(-4px);border-color:#4a4a58;box-shadow:0 15px 35px #0007}
+.android-tool{--tile:#63e6a0}.code-tool{--tile:#62a8ff}.kotlin-tool{--tile:#9b6cff}.java-tool{--tile:#ff9b5b}.python-tool{--tile:#ffd15c}.shell-tool{--tile:#55d9ff}.linux-tool{--tile:#ffb45b}.git-tool{--tile:#ff6b57}.gerrit-tool{--tile:#63e6a0}.actions-tool{--tile:#8b7cff}.make-tool{--tile:#b0b4c0}.web-tool{--tile:#55d9ff}
+.contact-inner{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}.contact-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}.contact-card,.contact-note{min-height:115px;padding:20px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#111119,#0b0b10);display:flex;align-items:center;gap:13px;transition:.28s var(--ease)}.contact-card:hover{transform:translateY(-4px);border-color:#4a405b}.contact-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center}.contact-icon svg{width:19px}.x-card .contact-icon{color:#fff;background:#ffffff0b;border:1px solid #ffffff18}.insta-card .contact-icon{color:#ff72b6;background:#ff4eaa12;border:1px solid #ff4eaa33}.contact-card span:nth-child(2),.contact-note span{display:flex;flex-direction:column;gap:4px}.contact-card b,.contact-note b{font-size:12px}.contact-card small,.contact-note small{font-size:9px;color:#686878}.contact-chevron{margin-left:auto;width:15px;color:#555565}.contact-note{grid-column:1/-1;min-height:80px;background:#0c0c12}.contact-note>svg{width:19px;color:var(--purple)}
+@media(max-width:1000px){.tool-tiles{grid-template-columns:repeat(4,1fr)}.contact-inner{grid-template-columns:1fr}}
+@media(max-width:700px){.tool-tiles{grid-template-columns:repeat(3,1fr)}.contact-cards{grid-template-columns:1fr}}
+@media(max-width:500px){.tool-tiles{grid-template-columns:repeat(2,1fr)}.tool-tile{min-height:118px}}
