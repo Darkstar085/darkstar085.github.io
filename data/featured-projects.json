@@ -1,30 +1,48 @@
 [
   {
-    "name": "device_xiaomi_whyred",
-    "html_url": "https://github.com/Darkstar085/device_xiaomi_whyred",
-    "description": "Device Tree For Redmi Note 5 Pro (Whyred)",
-    "language": "C++",
-    "stargazers_count": 4,
+    "name": "darkstar085.github.io",
+    "html_url": "https://github.com/Darkstar085/darkstar085.github.io",
+    "description": "Darkstar085's developer portfolio \u2014 projects, skills, and technical work.",
+    "language": "CSS",
+    "stargazers_count": 0,
     "category": "GITHUB PROJECT",
-    "updated_label": "Jan 2026"
+    "updated_label": "Aug 2026"
   },
   {
-    "name": "Superiorwalls",
-    "html_url": "https://github.com/Darkstar085/Superiorwalls",
+    "name": "odisha-epaper",
+    "html_url": "https://github.com/Darkstar085/odisha-epaper",
+    "description": "Automated Odisha newspaper e-paper downloader and Telegram delivery bot using GitHub Actions.",
+    "language": "Python",
+    "stargazers_count": 0,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Aug 2026"
+  },
+  {
+    "name": "android-app-updater",
+    "html_url": "https://github.com/Darkstar085/android-app-updater",
+    "description": "Automatically tracks GitHub releases, downloads updated Android apps, and publishes them to Telegram. \ud83d\ude80",
+    "language": "",
+    "stargazers_count": 0,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Aug 2026"
+  },
+  {
+    "name": "Wallpapers",
+    "html_url": "https://github.com/Darkstar085/Wallpapers",
+    "description": "\ud83d\uddbc\ufe0f Curated collection of high-quality desktop & mobile wallpapers, organized by category and resolution. Contributions are welcome!",
+    "language": "",
+    "stargazers_count": 0,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Aug 2026"
+  },
+  {
+    "name": "Darkstar085",
+    "html_url": "https://github.com/Darkstar085/Darkstar085",
     "description": "Open-source project by Darkstar085.",
-    "language": "Kotlin",
-    "stargazers_count": 4,
+    "language": "",
+    "stargazers_count": 0,
     "category": "GITHUB PROJECT",
-    "updated_label": "Nov 2025"
-  },
-  {
-    "name": "vendor_xiaomi_whyred",
-    "html_url": "https://github.com/Darkstar085/vendor_xiaomi_whyred",
-    "description": "Vendor blobs tree for Redmi Note 5 Pro (Whyred)",
-    "language": "Makefile",
-    "stargazers_count": 3,
-    "category": "GITHUB PROJECT",
-    "updated_label": "Jan 2026"
+    "updated_label": "Aug 2026"
   },
   {
     "name": "device_oneplus_avicii",
@@ -34,14 +52,5 @@
     "stargazers_count": 2,
     "category": "GITHUB PROJECT",
     "updated_label": "May 2026"
-  },
-  {
-    "name": "kernel_xiaomi_whyred",
-    "html_url": "https://github.com/Darkstar085/kernel_xiaomi_whyred",
-    "description": "Kernel tree for Redmi Note 5 Pro (Whyred)",
-    "language": "C",
-    "stargazers_count": 2,
-    "category": "GITHUB PROJECT",
-    "updated_label": "Jan 2026"
   }
 ]
