@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Sync top 5 repositories
+      - name: Sync latest 6 repositories
         run: python tools/sync_projects.py
 
       - name: Commit updated project list

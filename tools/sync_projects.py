@@ -20,9 +20,11 @@ def fetch_repos():
 def main():
     repos = fetch_repos()
     repos = [r for r in repos if not r.get("fork") and not r.get("archived")]
-    # "Top 5" means highest-starred repositories; updated time breaks ties.
-    repos.sort(key=lambda r: (r.get("stargazers_count", 0), r.get("updated_at", "")), reverse=True)
-    top = repos[:5]
+    # Keep the six repositories with the most recent GitHub update time.
+    # The API already returns repositories sorted by updated time, but sorting
+    # locally makes the selection deterministic and protects against API changes.
+    repos.sort(key=lambda r: r.get("updated_at", ""), reverse=True)
+    top = repos[:6]
     result = []
     for r in top:
         updated = r.get("updated_at", "")

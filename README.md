@@ -9,7 +9,7 @@ A modern, responsive developer portfolio for **Darkstar085**, built with plain H
 - Cursor glow and subtle reveal animations
 - Android, AOSP, Linux, open-source, automation, and web-focused work sections
 - Locally stored SVG icons — no icon CDN required
-- Daily GitHub project sync that keeps the five featured repositories current
+- Daily GitHub project sync that keeps the six latest-updated repositories current
 - Accessible labels and semantic HTML where practical
 - GitHub Pages friendly; no build step required
 
@@ -41,7 +41,7 @@ The UI icons are bundled under `assets/icons/`. The page does not depend on an e
 
 ## Featured projects sync
 
-The workflow in `.github/workflows/sync-projects.yml` runs the Python script in `tools/sync_projects.py` and updates `data/featured-projects.json` with the five featured repositories.
+The workflow in `.github/workflows/sync-projects.yml` runs the Python script in `tools/sync_projects.py` and updates `data/featured-projects.json` with the six latest-updated repositories.
 
 For local testing:
 

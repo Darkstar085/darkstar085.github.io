@@ -58,7 +58,7 @@ async function loadProjects(){
     if(!res.ok) throw new Error("projects.json unavailable");
     const projects=await res.json();
     if(!Array.isArray(projects) || !projects.length) throw new Error("No projects");
-    grid.innerHTML=projects.slice(0,5).map((p,i)=>`
+    grid.innerHTML=projects.slice(0,6).map((p,i)=>`
       <a class="project reveal" data-repo href="${escapeHtml(p.html_url)}" target="_blank" rel="noreferrer">
         <div class="project-icon ${projectTone(i)}"><i data-icon="${projectIcon(p.language)}" aria-hidden="true"></i></div>
         
