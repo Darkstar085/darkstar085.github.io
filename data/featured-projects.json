@@ -1,23 +1,5 @@
 [
   {
-    "name": "Wallora",
-    "html_url": "https://github.com/Darkstar085/Wallora",
-    "description": "Open-source project by Darkstar085.",
-    "language": "Kotlin",
-    "stargazers_count": 0,
-    "category": "GITHUB PROJECT",
-    "updated_label": "Sep 2026"
-  },
-  {
-    "name": "Wallpapers",
-    "html_url": "https://github.com/Darkstar085/Wallpapers",
-    "description": "\ud83d\uddbc\ufe0f Curated collection of high-quality desktop & mobile wallpapers, organized by category and resolution. Contributions are welcome!",
-    "language": "Python",
-    "stargazers_count": 0,
-    "category": "GITHUB PROJECT",
-    "updated_label": "Sep 2026"
-  },
-  {
     "name": "odisha-epaper",
     "html_url": "https://github.com/Darkstar085/odisha-epaper",
     "description": "Automated Odisha newspaper e-paper downloader and Telegram delivery bot using GitHub Actions.",
@@ -27,19 +9,19 @@
     "updated_label": "Sep 2026"
   },
   {
-    "name": "Superiorwalls",
-    "html_url": "https://github.com/Darkstar085/Superiorwalls",
-    "description": "A Modern Wallpaper App for SuperiorOS",
-    "language": "Kotlin",
-    "stargazers_count": 4,
+    "name": "android-app-updater",
+    "html_url": "https://github.com/Darkstar085/android-app-updater",
+    "description": "Automated Android app release tracker",
+    "language": "Python",
+    "stargazers_count": 0,
     "category": "GITHUB PROJECT",
     "updated_label": "Sep 2026"
   },
   {
-    "name": "android-app-updater",
-    "html_url": "https://github.com/Darkstar085/android-app-updater",
-    "description": "Automated Android app release tracker that downloads new APK/EXE releases, creates consolidated GitHub Releases, and publishes updates to Telegram. \ud83d\ude80",
-    "language": "",
+    "name": "Superiorwalls",
+    "html_url": "https://github.com/Darkstar085/Superiorwalls",
+    "description": "Open-source project by Darkstar085.",
+    "language": "Kotlin",
     "stargazers_count": 0,
     "category": "GITHUB PROJECT",
     "updated_label": "Sep 2026"
@@ -47,10 +29,28 @@
   {
     "name": "darkstar085.github.io",
     "html_url": "https://github.com/Darkstar085/darkstar085.github.io",
-    "description": "Darkstar085's developer portfolio \u2014 projects, skills, and technical work.",
+    "description": "Darkstar085's developer portfolio",
     "language": "CSS",
     "stargazers_count": 0,
     "category": "GITHUB PROJECT",
-    "updated_label": "Aug 2026"
+    "updated_label": "Sep 2026"
+  },
+  {
+    "name": "Wallora",
+    "html_url": "https://github.com/Darkstar085/Wallora",
+    "description": "WIP",
+    "language": "Kotlin",
+    "stargazers_count": 0,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Sep 2026"
+  },
+  {
+    "name": "Wallpapers",
+    "html_url": "https://github.com/Darkstar085/Wallpapers",
+    "description": "Curated collection of high-quality desktop & mobile wallpapers, organized by category and resolution. Contributions are welcome!",
+    "language": "Python",
+    "stargazers_count": 0,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Sep 2026"
   }
 ]
