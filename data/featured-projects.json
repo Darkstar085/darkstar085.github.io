@@ -18,15 +18,6 @@
     "updated_label": "Sep 2026"
   },
   {
-    "name": "Superiorwalls",
-    "html_url": "https://github.com/Darkstar085/Superiorwalls",
-    "description": "Open-source project by Darkstar085.",
-    "language": "Kotlin",
-    "stargazers_count": 0,
-    "category": "GITHUB PROJECT",
-    "updated_label": "Sep 2026"
-  },
-  {
     "name": "darkstar085.github.io",
     "html_url": "https://github.com/Darkstar085/darkstar085.github.io",
     "description": "Darkstar085's developer portfolio",
@@ -52,5 +43,14 @@
     "stargazers_count": 0,
     "category": "GITHUB PROJECT",
     "updated_label": "Sep 2026"
+  },
+  {
+    "name": "Darkstar085",
+    "html_url": "https://github.com/Darkstar085/Darkstar085",
+    "description": "Open-source project by Darkstar085.",
+    "language": "",
+    "stargazers_count": 0,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Aug 2026"
   }
 ]
