@@ -1,10 +1,10 @@
 [
   {
-    "name": "Wallora",
-    "html_url": "https://github.com/Darkstar085/Wallora",
-    "description": "WIP",
+    "name": "SpeedIndicator",
+    "html_url": "https://github.com/Darkstar085/SpeedIndicator",
+    "description": "Real-time network speed indicator for Android",
     "language": "Kotlin",
-    "stargazers_count": 1,
+    "stargazers_count": 4,
     "category": "GITHUB PROJECT",
     "updated_label": "Sep 2026"
   },
@@ -18,38 +18,38 @@
     "updated_label": "Sep 2026"
   },
   {
-    "name": "Superiorwalls",
-    "html_url": "https://github.com/Darkstar085/Superiorwalls",
-    "description": "A modern Android app for discovering and saving beautiful SuperiorOS wallpapers",
-    "language": "Kotlin",
-    "stargazers_count": 2,
-    "category": "GITHUB PROJECT",
-    "updated_label": "Sep 2026"
-  },
-  {
-    "name": "SpeedIndicator",
-    "html_url": "https://github.com/Darkstar085/SpeedIndicator",
-    "description": "Real-time network speed indicator for Android",
-    "language": "Kotlin",
-    "stargazers_count": 3,
+    "name": "android-app-updater",
+    "html_url": "https://github.com/Darkstar085/android-app-updater",
+    "description": "Automated Android app release tracker",
+    "language": "Python",
+    "stargazers_count": 1,
     "category": "GITHUB PROJECT",
     "updated_label": "Sep 2026"
   },
   {
     "name": "Wallpapers",
     "html_url": "https://github.com/Darkstar085/Wallpapers",
-    "description": "Curated collection of high-quality desktop & mobile wallpapers, organized by category and resolution. Contributions are welcome!",
-    "language": "Python",
+    "description": "Open-source project by Darkstar085.",
+    "language": "",
+    "stargazers_count": 0,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Sep 2026"
+  },
+  {
+    "name": "Wallora",
+    "html_url": "https://github.com/Darkstar085/Wallora",
+    "description": "An open-source Android wallpaper app focused on simplicity, beauty, and a clean experience",
+    "language": "Kotlin",
     "stargazers_count": 1,
     "category": "GITHUB PROJECT",
     "updated_label": "Sep 2026"
   },
   {
-    "name": "android-app-updater",
-    "html_url": "https://github.com/Darkstar085/android-app-updater",
-    "description": "Automated Android app release tracker",
-    "language": "Python",
-    "stargazers_count": 1,
+    "name": "darkstar085.github.io",
+    "html_url": "https://github.com/Darkstar085/darkstar085.github.io",
+    "description": "Darkstar085's developer portfolio",
+    "language": "CSS",
+    "stargazers_count": 0,
     "category": "GITHUB PROJECT",
     "updated_label": "Sep 2026"
   }
