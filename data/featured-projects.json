@@ -9,15 +9,6 @@
     "updated_label": "Oct 2026"
   },
   {
-    "name": "Downly",
-    "html_url": "https://github.com/Darkstar085/Downly",
-    "description": "Open-source project by Darkstar085.",
-    "language": "Kotlin",
-    "stargazers_count": 0,
-    "category": "GITHUB PROJECT",
-    "updated_label": "Oct 2026"
-  },
-  {
     "name": "youtubedl-kotlin",
     "html_url": "https://github.com/Darkstar085/youtubedl-kotlin",
     "description": "Kotlin-first Android library for yt-dlp with a bundled Python runtime, optional FFmpeg/ffprobe and aria2 support, media metadata extraction, and download execution",
@@ -36,11 +27,11 @@
     "updated_label": "Oct 2026"
   },
   {
-    "name": "scripts",
-    "html_url": "https://github.com/Darkstar085/scripts",
-    "description": "For Lazy people like me..",
-    "language": "Shell",
-    "stargazers_count": 1,
+    "name": "Downly",
+    "html_url": "https://github.com/Darkstar085/Downly",
+    "description": "Android media downloader powered by yt-dlp, Kotlin, and Jetpack Compose.",
+    "language": "Kotlin",
+    "stargazers_count": 0,
     "category": "GITHUB PROJECT",
     "updated_label": "Oct 2026"
   },
@@ -50,6 +41,15 @@
     "description": "Automated Android app release tracker",
     "language": "Python",
     "stargazers_count": 1,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Oct 2026"
+  },
+  {
+    "name": "darkstar085.github.io",
+    "html_url": "https://github.com/Darkstar085/darkstar085.github.io",
+    "description": "Darkstar085's developer portfolio",
+    "language": "CSS",
+    "stargazers_count": 0,
     "category": "GITHUB PROJECT",
     "updated_label": "Oct 2026"
   }
