@@ -9,6 +9,24 @@
     "updated_label": "Nov 2026"
   },
   {
+    "name": "Downly",
+    "html_url": "https://github.com/Darkstar085/Downly",
+    "description": "Android media downloader powered by yt-dlp,aria2c, Kotlin, and Jetpack Compose.",
+    "language": "Kotlin",
+    "stargazers_count": 1,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Nov 2026"
+  },
+  {
+    "name": "youtubedl-kotlin",
+    "html_url": "https://github.com/Darkstar085/youtubedl-kotlin",
+    "description": "Kotlin-first Android library for yt-dlp with a bundled Python runtime, optional FFmpeg/ffprobe and aria2 support, media metadata extraction, and download execution",
+    "language": "Kotlin",
+    "stargazers_count": 1,
+    "category": "GITHUB PROJECT",
+    "updated_label": "Nov 2026"
+  },
+  {
     "name": "Sonora",
     "html_url": "https://github.com/Darkstar085/Sonora",
     "description": "A modern, privacy-focused Android music player for local audio playback, built with Jetpack Compose and Media3",
@@ -18,11 +36,11 @@
     "updated_label": "Nov 2026"
   },
   {
-    "name": "Downly",
-    "html_url": "https://github.com/Darkstar085/Downly",
-    "description": "Android media downloader powered by yt-dlp, Kotlin, and Jetpack Compose.",
+    "name": "SpeedIndicator",
+    "html_url": "https://github.com/Darkstar085/SpeedIndicator",
+    "description": "Real-time network speed indicator for Android",
     "language": "Kotlin",
-    "stargazers_count": 0,
+    "stargazers_count": 5,
     "category": "GITHUB PROJECT",
     "updated_label": "Nov 2026"
   },
@@ -34,23 +52,5 @@
     "stargazers_count": 0,
     "category": "GITHUB PROJECT",
     "updated_label": "Nov 2026"
-  },
-  {
-    "name": "android-app-updater",
-    "html_url": "https://github.com/Darkstar085/android-app-updater",
-    "description": "Automated Android app release tracker",
-    "language": "Python",
-    "stargazers_count": 1,
-    "category": "GITHUB PROJECT",
-    "updated_label": "Nov 2026"
-  },
-  {
-    "name": "darkstar085.github.io",
-    "html_url": "https://github.com/Darkstar085/darkstar085.github.io",
-    "description": "Darkstar085's developer portfolio",
-    "language": "CSS",
-    "stargazers_count": 0,
-    "category": "GITHUB PROJECT",
-    "updated_label": "Oct 2026"
   }
 ]
